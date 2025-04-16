@@ -16,7 +16,24 @@ theme:
         icon: material/weather-night
         name: Dark Mode
       primary: blue grey
-      accent: deep purple 
+      accent: deep purple
+  features:
+    - navigation.sections
+#    - navigation.expand
+    - navigation.footer
+    - content.tooltips
+  icon:
+    logo: fontawesome/solid/w
+    
+
+nav:
+  - 🏠 Home: index.md
+  - 👤 About: about.md
+  - 📒 Blog:
+        - 🔧 Ufw-role: posts/post-02-ufw-role
+        - 💾 Dotfiles Setup: posts/post-03-dotfile-mgmnt
+        - 🤖 Figurine Setup: posts/post-01-figurine-install
+  - 🤝 Sponsor: sponsor.md
 
 plugins:
   - search
@@ -44,3 +61,12 @@ markdown_extensions:
   - pymdownx.superfences
   - admonition
   - pymdownx.details
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/yourname
+    - icon: fontawesome/brands/x-twitter
+      link: https://x.com/yourhandle
+    - icon: fontawesome/solid/rss
+      link: /rss.xml

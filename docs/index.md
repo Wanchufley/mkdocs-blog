@@ -43,7 +43,7 @@
 </div>
 
 <div class="card">
-  <h3><a href="posts/post-01-figurine-install.md"> 🤖 Figurine Setup</a></h3>
+  <h3><a href="posts/post-01-figurine-install"> 🤖 Figurine Setup</a></h3>
   <p>Add fun ASCII banners to your terminal using <code>figurine</code>.</p>
 </div>
 
