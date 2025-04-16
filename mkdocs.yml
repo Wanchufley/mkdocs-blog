@@ -8,7 +8,7 @@ theme:
       toggle:
         icon: material/weather-sunny
         name: Dark Mode
-      primary: blue grey
+      primary: black
       accent: deep purple
      # Dark mode
     - scheme: default

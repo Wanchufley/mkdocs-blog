@@ -47,11 +47,6 @@
   <p>Add fun ASCII banners to your terminal using <code>figurine</code>.</p>
 </div>
 
-<div class="card">
-  <h3><a href="/homelab-overview/"> 🏠 Homelab Overview</a></h3>
-  <p>Full tour of my Proxmox cluster, TrueNAS Scale storage, and current goals.</p>
-</div>
-
 </div>
 
 ---
