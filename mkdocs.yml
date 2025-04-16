@@ -20,13 +20,14 @@ theme:
 
 plugins:
   - search
-  - blog:
-      blog_dir: .
-      categories_allowed:
-      - Tech
-      post_url_format: "{slug}"
-      blog_toc: true
-      archive: false
+#  - blog:
+#      blog_dir: .
+#      categories_allowed:
+#      - Tech
+#      post_url_format: "{slug}"
+#      blog_toc: true
+#      archive: false
+#      index_page: false
 
 markdown_extensions:
   - attr_list
