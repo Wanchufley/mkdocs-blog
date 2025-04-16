@@ -28,13 +28,41 @@
 
 ---
 
-# Homelab :house: :test_tube:
+## 📚 Latest Posts
+
+<div class="card-grid">
+
+<div class="card">
+  <h3><a href="ufw-role/"> 🔧 ufw-role</a></h3>
+  <p>Ansible role for setting up UFW, SSH key access, and automation security best practices.</p>
+</div>
+
+<div class="card">
+  <h3><a href="dotfile-mgm"> 💾 Dotfiles Setup</a></h3>
+  <p>How I bootstrap a fresh machine with my dotfiles and Git configuration.</p>
+</div>
+
+<div class="card">
+  <h3><a href="figurine-install/"> 🤖 Figurine Setup</a></h3>
+  <p>Add fun ASCII banners to your terminal using <code>figurine</code>.</p>
+</div>
+
+<div class="card">
+  <h3><a href="/homelab-overview/"> 🏠 Homelab Overview</a></h3>
+  <p>Full tour of my Proxmox cluster, TrueNAS Scale storage, and current goals.</p>
+</div>
+
+</div>
+
+---
+
+# **Homelab** :house: :test_tube:
 
 Self-documentation repo for my own sake along the journey of setting up a nice homelab.
 
 <!-- more -->
 
-## Introduction
+## :clipboard: Introduction
 
 First of all, I have to say that I am not an expert in networking, containers, storage, Linux... so please be aware that everything you see here does not originate from me. It comes from many sources, including YouTube videos, forums, knowledgeable friends, and a general willingness to get things working.
 
@@ -42,7 +70,7 @@ This repo serves as a way for me to document the setup of my new homelab after h
 
 ---
 
-## Current Setup
+## :gear: Current Setup
 
 - **Hardware**: A 3 node Proxmox Cluster, consisting on 2 minipc's, 1 of them only runs as quorum device, and the other one has my main and more lightwight services, both in Docker
 and LXC containers, and lastly, and HP Z620 Workstation in which I am hosting an instance of TrueNAS Scale along with another docker instance where I am passing through the GPU. 
@@ -52,7 +80,7 @@ and LXC containers, and lastly, and HP Z620 Workstation in which I am hosting an
 
 ---
 
-## Planned Services
+## :chart_with_upwards_trend: Planned Services
 
 Here’s a list of services I plan to run:
 
@@ -70,7 +98,7 @@ Here’s a list of services I plan to run:
 
 ---
 
-## Key Considerations
+## :construction: Key Considerations
 
 1. **Local Access Only**:  
    All services will be accessible **only inside my house** theoritetically, I have a Tailnet and many connectors in various machines (virtual or physical) so I don't need
@@ -85,34 +113,8 @@ Here’s a list of services I plan to run:
 
 ---
 
-## Conclusion
+## :white_check_mark: Conclusion
 
 This repo is a work in progress as I rebuild my homelab. It’s a learning process, and I hope documenting it helps me (and potentially others) along the way.
 
 ---
-
-## 📚 Latest Posts
-
-<div class="card-grid">
-
-<div class="card">
-  <h3><a href="ufw-role/">🔧 ufw-role</a></h3>
-  <p>Ansible role for setting up UFW, SSH key access, and automation security best practices.</p>
-</div>
-
-<div class="card">
-  <h3><a href="dotfile-mgm">💾 Dotfiles Setup</a></h3>
-  <p>How I bootstrap a fresh machine with my dotfiles and Git configuration.</p>
-</div>
-
-<div class="card">
-  <h3><a href="figurine-install/">🤖 Figurine Setup</a></h3>
-  <p>Add fun ASCII banners to your terminal using <code>figurine</code>.</p>
-</div>
-
-<div class="card">
-  <h3><a href="/homelab-overview/">🏠 Homelab Overview</a></h3>
-  <p>Full tour of my Proxmox cluster, TrueNAS Scale storage, and current goals.</p>
-</div>
-
-</div>
