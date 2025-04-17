@@ -15,7 +15,7 @@ theme:
       toggle:
         icon: material/weather-night
         name: Dark Mode
-      primary: blue grey
+      primary: black
       accent: deep purple
   features:
     - navigation.sections
@@ -33,7 +33,7 @@ nav:
         - 🔧 Ufw-role: posts/post-02-ufw-role
         - 💾 Dotfiles Setup: posts/post-03-dotfile-mgmnt
         - 🤖 Figurine Setup: posts/post-01-figurine-install
-  - 🤝 Sponsor: sponsor.md
+#  - 🤝 Sponsor: sponsor.md
 
 plugins:
   - search
@@ -50,7 +50,6 @@ markdown_extensions:
   - attr_list
   - pymdownx.emoji:
       emoji_index: !!python/name:material.extensions.emoji.twemoji
-      emoji_generator: !!python/name:material.extensions.emoji.to_svg
   - pymdownx.highlight:
       use_pygments: true
       anchor_linenums: true
