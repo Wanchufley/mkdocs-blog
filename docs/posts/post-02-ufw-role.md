@@ -1,8 +1,10 @@
 ---
 date:
     created: 2025-04-16
-categories:
-    - Tech
+tags:
+    - network
+    - security
+    - linux
 slug: ufw-role
 ---
 # **Download, install and configure UFW rules using Ansible :a:**

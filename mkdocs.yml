@@ -45,7 +45,8 @@ plugins:
 #      blog_toc: true
 #      archive: false
 #      index_page: false
-
+  - tags:
+      tags_file: tags.md
 markdown_extensions:
   - attr_list
   - pymdownx.emoji:
@@ -60,12 +61,14 @@ markdown_extensions:
   - pymdownx.superfences
   - admonition
   - pymdownx.details
-
-extra:
-  social:
-    - icon: fontawesome/brands/github
-      link: https://github.com/yourname
-    - icon: fontawesome/brands/x-twitter
-      link: https://x.com/yourhandle
-    - icon: fontawesome/solid/rss
-      link: /rss.xml
+  - toc:
+      permalink: true
+  - pymdownx.tabbed:
+     alternate_style: true
+  - pymdownx.emoji
+  - pymdownx.highlight
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.tasklist
+  - pymdownx.tilde

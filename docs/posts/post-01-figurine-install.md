@@ -1,8 +1,10 @@
 ---
 date:
     created: 2025-04-16
-categories:
-    - Tech
+tags:
+    - customization
+    - shell
+    - linux
 slug: figurine-install
 
 ---

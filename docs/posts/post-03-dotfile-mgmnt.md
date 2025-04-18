@@ -1,8 +1,10 @@
 ---
 date:
     created: 2025-04-16
-categories:
-    - Tech
+tags:
+    - configuration
+    - shell
+    - linux
 slug: dotfile-mgm
 ---
 # **Simple way to manage all of your dotfiles :card_file_box:**
