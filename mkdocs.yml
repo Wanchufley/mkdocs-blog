@@ -29,11 +29,6 @@ theme:
 nav:
   - 🏠 Home: index.md
   - 👤 About: about.md
-  - 📒 Blog:
-        - Ufw-role: posts/post-02-ufw-role
-        - Dotfiles Setup: posts/post-03-dotfile-mgmnt
-        - Figurine Setup: posts/post-01-figurine-install
-        - NPM Setup: posts/post-04-npm-installation
 #  - 🤝 Sponsor: sponsor.md
 
 plugins:
