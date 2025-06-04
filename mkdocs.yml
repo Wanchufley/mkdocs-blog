@@ -2,6 +2,7 @@ site_name: Wanchufley's Documentation
 site_url: https://sitename.example
 theme:
   name: material
+  custom_dir: ./docs/overrides/
   palette: 
     # Dark mode
     - scheme: slate
@@ -25,10 +26,12 @@ theme:
   icon:
     logo: fontawesome/solid/w
     
-
+extra_css:
+  - stylesheets/cards.css
 nav:
   - 🏠 Home: index.md
   - 👤 About: about.md
+  - 🏷️ Tags: tags.md 
 #  - 🤝 Sponsor: sponsor.md
 
 plugins:
@@ -68,3 +71,4 @@ markdown_extensions:
   - pymdownx.smartsymbols
   - pymdownx.tasklist
   - pymdownx.tilde
+
