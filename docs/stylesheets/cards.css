@@ -1,3 +1,4 @@
+/* Card Grid Layout */
 .md-content .card-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr); 
@@ -8,7 +9,7 @@
 .card {
   border-radius: 1rem;
   padding: 1.2rem;
-  background-color: var(--md-default-bg-color); /* fallback if no image */
+  background-color: var(--md-default-bg-color);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -28,7 +29,7 @@
 
 .card h3, .card p {
   margin: 0;
-  text-shadow: 0 1px 2px rgba(0,0,0,0.6); /* helps with readability */
+  text-shadow: 0 1px 2px rgba(0,0,0,0.6);
 }
 
 .card h3 a {
@@ -36,7 +37,7 @@
   text-decoration: none;
 }
 
-/* Header layout */
+/* Header Layout */
 .md-header__inner {
   display: flex;
   justify-content: space-between;
@@ -45,7 +46,7 @@
   padding: 0 0.6rem;
 }
 
-/* Left section with logo */
+/* Logo Styling */
 .md-header__button.md-logo {
   margin: 0;
   padding: 0.6rem;
@@ -78,7 +79,7 @@
   display: none;
 }
 
-/* Center section with title */
+/* Header Title */
 .md-header__title {
   flex: 0 1 auto;
   margin: 0 1rem;
@@ -91,7 +92,7 @@
   visibility: visible;
 }
 
-/* Right section with search and theme toggle */
+/* Header Options */
 .md-header__options {
   display: flex;
   align-items: center;
@@ -102,63 +103,37 @@
   margin: 0;
 }
 
-/* Ensure theme toggle is properly positioned */
 .md-header__option {
   display: flex;
   align-items: center;
 }
 
-/* Hide unwanted navigation elements */
-.md-nav--integrated {
+/* Hide Navigation Elements */
+.md-nav--integrated,
+.md-nav__title,
+.md-nav,
+.md-sidebar,
+.md-tabs {
   display: none !important;
 }
 
-.md-nav__title {
-  display: none !important;
-}
-
-/* Ensure main content uses full width */
+/* Main Content Layout */
 .md-main__inner {
   margin: 0 auto !important;
   max-width: 70% !important;
+  background: transparent !important;
+  margin-top: 1rem;
 }
 
 .md-content {
   width: 100% !important;
   margin: 0 !important;
-  background-color: rgba(10, 25, 47, 0.7) !important;
+  background-color: transparent !important;
   border-radius: 12px !important;
-  backdrop-filter: blur(8px) !important;
   padding: 2rem !important;
-  border: 1px solid rgba(255, 255, 255, 0.1) !important;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3) !important;
 }
 
-/* Hide all navigation elements */
-.md-nav {
-  display: none !important;
-}
-
-.md-sidebar {
-  display: none !important;
-}
-
-.md-tabs {
-  display: none !important;
-}
-
-/* Remove spacing for hidden elements */
-.md-main__inner {
-  margin: 0 auto !important;
-  max-width: 70% !important;
-}
-
-.md-content {
-  margin: 0 !important;
-  max-width: none !important;
-}
-
-/* Custom navigation styles */
+/* Custom Navigation */
 .custom-nav {
   display: flex;
   align-items: center;
@@ -182,14 +157,11 @@
   opacity: 1;
 }
 
-/* Background animation */
-@keyframes move-background {
-  from {
-    background-position: 0 0;
-  }
-  to {
-    background-position: 0 -1000px;
-  }
+/* Background and Animation */
+@keyframes nebula {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
 body {
@@ -209,55 +181,10 @@ body {
   overflow-x: hidden;
 }
 
-body::before {
-  content: "";
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: 
-    radial-gradient(1.2px 1.2px at 15% 28%, white 100%, transparent),
-    radial-gradient(1.8px 1.8px at 38% 44%, white 100%, transparent),
-    radial-gradient(1.4px 1.4px at 82% 47%, white 100%, transparent),
-    radial-gradient(1.6px 1.6px at 59% 63%, white 100%, transparent),
-    radial-gradient(1.3px 1.3px at 27% 76%, white 100%, transparent),
-    radial-gradient(1.7px 1.7px at 91% 86%, white 100%, transparent),
-    radial-gradient(1.5px 1.5px at 48% 91%, white 100%, transparent);
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
-  opacity: 0.4;
-  animation: twinkle-2 7s infinite;
-  pointer-events: none;
-  z-index: -1;
-}
-
-@keyframes nebula {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
-
-/* Stars effect */
-@keyframes twinkle-1 {
+/* Stars Effect */
+@keyframes twinkle {
   0%, 100% { opacity: 0.2; }
-  50% { opacity: 0.8; }
-}
-
-@keyframes twinkle-2 {
-  0%, 100% { opacity: 0.3; }
-  60% { opacity: 1; }
-}
-
-@keyframes twinkle-3 {
-  0%, 100% { opacity: 0.4; }
-  30% { opacity: 0.9; }
+  50% { opacity: 0.9; }
 }
 
 body::after {
@@ -268,131 +195,93 @@ body::after {
   width: 100%;
   height: 100%;
   background-image: 
-    radial-gradient(1px 1px at 23% 13%, white 100%, transparent),
-    radial-gradient(1.5px 1.5px at 42% 8%, white 100%, transparent),
-    radial-gradient(1px 1px at 77% 16%, white 100%, transparent),
-    radial-gradient(2px 2px at 12% 32%, white 100%, transparent),
-    radial-gradient(1.2px 1.2px at 63% 41%, white 100%, transparent),
-    radial-gradient(1.8px 1.8px at 88% 35%, white 100%, transparent),
-    radial-gradient(2px 2px at 19% 67%, white 100%, transparent),
-    radial-gradient(1.3px 1.3px at 52% 71%, white 100%, transparent),
-    radial-gradient(1.7px 1.7px at 93% 83%, white 100%, transparent),
-    radial-gradient(1.5px 1.5px at 31% 91%, white 100%, transparent),
-    radial-gradient(2px 2px at 68% 88%, white 100%, transparent),
-    radial-gradient(1px 1px at 83% 95%, white 100%, transparent),
-    radial-gradient(1.4px 1.4px at 7% 89%, white 100%, transparent),
-    radial-gradient(1.6px 1.6px at 45% 57%, white 100%, transparent),
-    radial-gradient(1.2px 1.2px at 71% 24%, white 100%, transparent);
+    radial-gradient(1.2px 1.2px at 17% 23%, white 100%, transparent),
+    radial-gradient(1.8px 1.8px at 42% 12%, white 100%, transparent),
+    radial-gradient(1.1px 1.1px at 73% 31%, white 100%, transparent),
+    radial-gradient(2px 2px at 28% 56%, white 100%, transparent),
+    radial-gradient(1.4px 1.4px at 63% 41%, white 100%, transparent),
+    radial-gradient(1.6px 1.6px at 89% 67%, white 100%, transparent),
+    radial-gradient(1.3px 1.3px at 34% 82%, white 100%, transparent),
+    radial-gradient(1.7px 1.7px at 81% 93%, white 100%, transparent),
+    radial-gradient(1.5px 1.5px at 12% 76%, white 100%, transparent),
+    radial-gradient(1.9px 1.9px at 58% 89%, white 100%, transparent),
+    radial-gradient(1.2px 1.2px at 94% 48%, white 100%, transparent),
+    radial-gradient(1.6px 1.6px at 7% 44%, white 100%, transparent),
+    radial-gradient(1.3px 1.3px at 48% 62%, white 100%, transparent),
+    radial-gradient(1.8px 1.8px at 69% 19%, white 100%, transparent),
+    radial-gradient(1.4px 1.4px at 91% 8%, white 100%, transparent),
+    radial-gradient(1.7px 1.7px at 23% 4%, white 100%, transparent),
+    radial-gradient(1.5px 1.5px at 83% 73%, white 100%, transparent);
   background-size: 100% 100%;
   background-repeat: no-repeat;
-  opacity: 0.5;
+  opacity: 0.4;
+  animation: twinkle 8s infinite;
   pointer-events: none;
   z-index: -1;
 }
 
-/* Ensure content is above the background */
-.md-main {
-  position: relative;
-  z-index: 2;
+/* Nebula Glow */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    radial-gradient(circle at 20% 30%, rgba(255, 0, 128, 0.1) 0%, transparent 40%),
+    radial-gradient(circle at 80% 70%, rgba(0, 255, 255, 0.1) 0%, transparent 40%);
+  pointer-events: none;
+  z-index: -1;
 }
 
-/* Adjust text colors for better contrast */
-.md-content article {
-  color: rgba(255, 255, 255, 0.9);
+/* Header Transparency */
+.md-header {
+  background: rgba(10, 25, 47, 0) !important;
+  box-shadow: none !important;
 }
 
-.md-typeset h1, 
-.md-typeset h2,
-.md-typeset h3,
-.md-typeset h4 {
-  color: #c9d1ff !important;
+.md-header--hidden {
+  transform: translateY(-100%) !important;
 }
 
-.md-typeset a {
-  color: #a6c1ff !important;
-}
-
-.md-typeset a:hover {
-  color: #d4e0ff !important;
-}
-
-/* Enhance code blocks for nebula theme */
-.md-typeset code {
-  background-color: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.md-typeset pre {
-  background-color: rgba(10, 25, 47, 0.8);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-}
-
-/* Force dark mode globally */
-:root,
-[data-md-color-scheme="default"],
-[data-md-color-scheme="slate"] {
+/* Dark Mode Styles */
+:root {
   --md-primary-fg-color: #000000;
-  --md-primary-fg-color--light: #000000;
+  --md-primary-fg-color--light: #ffffff;
   --md-primary-fg-color--dark: #000000;
-  --md-primary-bg-color: #ffffff;
-  --md-primary-bg-color--light: #ffffff;
-  
-  --md-default-bg-color: transparent;
-  --md-default-bg-color--light: transparent;
-  --md-default-bg-color--lighter: transparent;
-  --md-default-bg-color--lightest: transparent;
   --md-default-fg-color: #ffffff;
   --md-default-fg-color--light: #ffffff;
   --md-default-fg-color--lighter: rgba(255, 255, 255, 0.7);
   --md-default-fg-color--lightest: rgba(255, 255, 255, 0.3);
-  
   --md-code-fg-color: #e6e6e6;
   --md-code-bg-color: rgba(0, 0, 0, 0.4);
-  --md-code-hl-color: rgba(255, 255, 255, 0.1);
-  --md-code-hl-number-color: #e6c07b;
-  --md-code-hl-special-color: #db4d52;
-  --md-code-hl-function-color: #61afef;
-  --md-code-hl-constant-color: #d19a66;
-  --md-code-hl-keyword-color: #c678dd;
-  --md-code-hl-string-color: #98c379;
-  --md-code-hl-name-color: #e06c75;
-  --md-code-hl-operator-color: #56b6c2;
-  --md-code-hl-punctuation-color: #ffffff;
-  --md-code-hl-comment-color: #7f848e;
-  --md-code-hl-generic-color: #ffffff;
-  --md-code-hl-variable-color: #e06c75;
-
   --md-typeset-color: var(--md-default-fg-color);
-  --md-typeset-a-color: var(--md-primary-fg-color);
-  
+  --md-typeset-a-color: #61afef;
   --md-admonition-bg-color: rgba(0, 0, 0, 0.2);
   --md-admonition-fg-color: var(--md-default-fg-color);
-
-  --md-footer-bg-color: transparent;
-  --md-footer-bg-color--dark: transparent;
-  --md-footer-fg-color: var(--md-default-fg-color);
 }
 
-/* Override specific elements */
-.md-main {
-  background-color: transparent !important;
-  color: var(--md-default-fg-color) !important;
-}
-
+/* Typography and Links */
 .md-typeset {
   color: var(--md-default-fg-color) !important;
 }
 
-.md-nav {
-  color: var(--md-default-fg-color) !important;
-  background-color: transparent !important;
+.md-typeset a {
+  color: var(--md-typeset-a-color);
 }
 
+.md-typeset a:hover {
+  color: var(--md-typeset-a-color);
+  text-decoration: underline;
+}
+
+/* Code Blocks */
 .md-typeset code {
   background-color: var(--md-code-bg-color) !important;
   color: var(--md-code-fg-color) !important;
   border-radius: 4px;
+  padding: 0.2em 0.5em;
 }
 
 .md-typeset pre {
@@ -400,6 +289,7 @@ body::after {
   color: var(--md-code-fg-color) !important;
 }
 
+/* Admonitions */
 .md-typeset .admonition,
 .md-typeset details {
   background-color: var(--md-admonition-bg-color) !important;
@@ -410,116 +300,4 @@ body::after {
 .md-typeset summary {
   background-color: rgba(0, 0, 0, 0.3) !important;
   color: var(--md-default-fg-color) !important;
-}
-
-/* Make header fully transparent */
-.md-header {
-  background: rgba(10, 25, 47, 0) !important;
-  box-shadow: none !important;
-}
-
-.md-header--hidden {
-  transform: translateY(-100%) !important;
-}
-
-.md-main__inner {
-  background: transparent !important;
-  margin-top: 1rem;
-}
-
-/* Style code blocks */
-.md-typeset pre, .md-typeset code {
-  background-color: var(--md-code-bg-color) !important;
-  color: var(--md-code-fg-color) !important;
-  border-radius: 4px;
-}
-
-.md-typeset pre code {
-  background-color: transparent !important;
-}
-
-/* Make content areas transparent */
-.md-content {
-  background-color: transparent !important;
-  border: none !important;
-  box-shadow: none !important;
-  backdrop-filter: none !important;
-}
-
-.md-content__inner {
-  background: transparent !important;
-  padding: 0 !important;
-}
-
-/* Keep the card styles but make sure they're not affected by transparency */
-.card {
-  background-color: var(--md-default-bg-color);
-  border-radius: 1rem;
-  padding: 1.2rem;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  color: white;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-  transition: 0.2s ease-in-out;
-  min-height: 180px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-}
-
-/* Make search modal semi-transparent */
-.md-search__inner {
-  background: rgba(0, 0, 0, 0.3) !important;
-  backdrop-filter: blur(10px) !important;
-}
-
-.md-search__output {
-  background: rgba(0, 0, 0, 0.3) !important;
-  backdrop-filter: blur(10px) !important;
-}
-
-.md-search__overlay {
-  background: rgba(0, 0, 0, 0.2) !important;
-}
-
-/* Make code blocks semi-transparent */
-.md-typeset code {
-  background-color: rgba(0, 0, 0, 0.2) !important;
-  border: 1px solid rgba(255, 255, 255, 0.1) !important;
-}
-
-.md-typeset pre {
-  background-color: rgba(0, 0, 0, 0.2) !important;
-  border: 1px solid rgba(255, 255, 255, 0.1) !important;
-  box-shadow: none !important;
-}
-
-/* Adjust text colors for better visibility on transparent background */
-.md-typeset {
-  color: rgba(255, 255, 255, 0.9) !important;
-}
-
-.md-typeset h1, 
-.md-typeset h2,
-.md-typeset h3,
-.md-typeset h4 {
-  color: rgba(255, 255, 255, 0.95) !important;
-}
-
-.md-typeset a {
-  color: rgba(166, 193, 255, 0.95) !important;
-}
-
-.md-typeset a:hover {
-  color: rgba(212, 224, 255, 1) !important;
-}
-
-/* Hide theme toggle button */
-[data-md-toggle="palette"],
-.md-header__button.md-icon[for="__palette"] {
-  display: none !important;
-}
-
-/* Add Playfair Display font */
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap');
+} 
