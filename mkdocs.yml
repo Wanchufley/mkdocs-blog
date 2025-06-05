@@ -3,29 +3,23 @@ site_url: https://sitename.example
 theme:
   name: material
   custom_dir: ./docs/overrides/
-  palette: 
-    # Dark mode
-    - scheme: slate
-      toggle:
-        icon: material/weather-sunny
-        name: Dark Mode
+  palette:
+    - media: "(prefers-color-scheme)"
+      scheme: slate
       primary: black
       accent: deep purple
-     # Dark mode
-    - scheme: default
       toggle:
-        icon: material/weather-night
-        name: Dark Mode
-      primary: black
-      accent: deep purple
+        icon: material/brightness-4
+        name: Switch to system preference
   features:
-    - navigation.sections
-#    - navigation.expand
-    - navigation.footer
-    - content.tooltips
+    - header.autohide
+    - navigation.instant
   icon:
-    logo: fontawesome/solid/w
-    
+    logo: material/alpha-w
+
+extra:
+  generator: false
+
 extra_css:
   - stylesheets/cards.css
 nav:
