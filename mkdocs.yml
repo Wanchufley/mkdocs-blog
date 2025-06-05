@@ -1,5 +1,5 @@
 site_name: Wanchufley's Documentation 
-site_url: https://sitename.example
+site_url: https://wanchufley.github.io/mkdocs-blog
 theme:
   name: material
   custom_dir: ./docs/overrides/
