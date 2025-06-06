@@ -38,7 +38,17 @@ nav:
   - 🏠 Home: index.md
   - 👤 About: about.md
   - 🏷️ Tags: tags.md 
-  - 📁 Files: file-explorer.md 
+  - 📁 Files: file-explorer.md
+  - 📝 Posts:
+      - Figurine Installation: posts/post-01-figurine-install.md
+      - UFW Role: posts/post-02-ufw-role.md
+      - Dotfile Management: posts/post-03-dotfile-mgmnt.md
+      - NPM Installation: posts/post-04-npm-installation.md
+  - 📚 Resources:
+      - Docker:
+          - Restic Restore: resources/docker/restic/restic-restore.md
+      - Dotfiles:
+          - README: resources/dotfiles/README.md
 #  - 🤝 Sponsor: sponsor.md
 
 plugins:
@@ -52,8 +62,7 @@ plugins:
 #      blog_toc: true
 #      archive: false
 #      index_page: false
-  - tags:
-      tags_file: tags.md
+  - tags
 
 markdown_extensions:
   - attr_list
@@ -68,7 +77,9 @@ markdown_extensions:
       line_spans: __span
       pygments_lang_class: true
   - pymdownx.inlinehilite
-  - pymdownx.snippets
+  - pymdownx.snippets:
+      base_path: ["."]
+      check_paths: true
   - pymdownx.superfences:
       custom_fences:
         - name: mermaid
