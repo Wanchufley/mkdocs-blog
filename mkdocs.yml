@@ -27,10 +27,12 @@ nav:
   - 🏠 Home: index.md
   - 👤 About: about.md
   - 🏷️ Tags: tags.md 
+  -  Files: file-explorer.md 
 #  - 🤝 Sponsor: sponsor.md
 
 plugins:
   - search
+  - include-markdown
 #  - blog:
 #      blog_dir: .
 #      categories_allowed:
