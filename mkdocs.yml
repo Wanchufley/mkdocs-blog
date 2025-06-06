@@ -22,6 +22,10 @@ extra:
 
 extra_css:
   - stylesheets/cards.css
+
+extra_javascript:
+  - javascripts/navigation.js
+
 nav:
   - 🏠 Home: index.md
   - 👤 About: about.md
