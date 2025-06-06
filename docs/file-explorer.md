@@ -5,12 +5,11 @@ description: Browse and download configuration files, scripts, and resources
 
 # 📁 File Explorer
 
-Welcome to my file repository! This is where you can find and download various configuration files, scripts, and resources that I mention in my blog posts. Whether you're looking for my dotfiles, Ansible playbooks, or Docker configurations, you'll find them all organized here.
+Welcome to my file repository! This is where you can find various configuration files, scripts, and resources that I mention in my blog posts. Whether you're looking for my dotfiles, Ansible playbooks, or Docker configurations, you'll find them all organized here.
 
 !!! note "How to Use"
     - Click on a folder (📂) to explore its contents
     - Click on a file name to view its details
-    - Use the download button (📥) to save files locally
     - All files are version controlled in my GitHub repository
 
 ## 📂 File Browser
@@ -28,8 +27,6 @@ Welcome to my file repository! This is where you can find and download various c
     ??? abstract "arr-stack"
         **Description**: Media management stack (*arr applications)
         
-        [📥 Download Files](../../resources/docker/arr-stack){ .md-button }
-        
         ??? example "View docker-compose.yaml"
             ```yaml
             --8<-- "docs/resources/docker/arr-stack/docker-compose.yaml"
@@ -37,8 +34,6 @@ Welcome to my file repository! This is where you can find and download various c
     
     ??? abstract "beszel"
         **Description**: Personal chat application
-        
-        [📥 Download Files](../../resources/docker/beszel){ .md-button }
         
         ??? example "View docker-compose.yaml"
             ```yaml
@@ -48,8 +43,6 @@ Welcome to my file repository! This is where you can find and download various c
     ??? abstract "code-server"
         **Description**: VS Code in the browser
         
-        [📥 Download Files](../../resources/docker/code-server){ .md-button }
-        
         ??? example "View docker-compose.yaml"
             ```yaml
             --8<-- "docs/resources/docker/code-server/docker-compose.yaml"
@@ -57,8 +50,6 @@ Welcome to my file repository! This is where you can find and download various c
 
     ??? abstract "crafty"
         **Description**: Minecraft server manager
-        
-        [📥 Download Files](../../resources/docker/crafty){ .md-button }
         
         ??? example "View docker-compose.yaml"
             ```yaml
@@ -68,8 +59,6 @@ Welcome to my file repository! This is where you can find and download various c
     ??? abstract "gotify"
         **Description**: Self-hosted notification service
         
-        [📥 Download Files](../../resources/docker/gotify){ .md-button }
-        
         ??? example "View docker-compose.yaml"
             ```yaml
             --8<-- "docs/resources/docker/gotify/docker-compose.yaml"
@@ -77,8 +66,6 @@ Welcome to my file repository! This is where you can find and download various c
 
     ??? abstract "homepage"
         **Description**: Dynamic homepage for services
-        
-        [📥 Download Files](../../resources/docker/homepage){ .md-button }
         
         ??? example "View docker-compose.yml"
             ```yaml
@@ -88,8 +75,6 @@ Welcome to my file repository! This is where you can find and download various c
     ??? abstract "it-tools"
         **Description**: Collection of IT tools and utilities
         
-        [📥 Download Files](../../resources/docker/it-tools){ .md-button }
-        
         ??? example "View docker-compose.yaml"
             ```yaml
             --8<-- "docs/resources/docker/it-tools/docker-compose.yaml"
@@ -97,8 +82,6 @@ Welcome to my file repository! This is where you can find and download various c
 
     ??? abstract "libreoffice"
         **Description**: LibreOffice in a container
-        
-        [📥 Download Files](../../resources/docker/libreoffice){ .md-button }
         
         ??? example "View docker-compose.yaml"
             ```yaml
@@ -108,8 +91,6 @@ Welcome to my file repository! This is where you can find and download various c
     ??? abstract "netbootxyz"
         **Description**: Network boot utility
         
-        [📥 Download Files](../../resources/docker/netbootxyz){ .md-button }
-        
         ??? example "View docker-compose.yaml"
             ```yaml
             --8<-- "docs/resources/docker/netbootxyz/docker-compose.yaml"
@@ -117,8 +98,6 @@ Welcome to my file repository! This is where you can find and download various c
 
     ??? abstract "npm"
         **Description**: Nginx Proxy Manager
-        
-        [📥 Download Files](../../resources/docker/npm){ .md-button }
         
         ??? example "View docker-compose.yaml"
             ```yaml
@@ -128,8 +107,6 @@ Welcome to my file repository! This is where you can find and download various c
     ??? abstract "ollama"
         **Description**: Local LLM runner
         
-        [📥 Download Files](../../resources/docker/ollama){ .md-button }
-        
         ??? example "View docker-compose.yaml"
             ```yaml
             --8<-- "docs/resources/docker/ollama/docker-compose.yaml"
@@ -137,8 +114,6 @@ Welcome to my file repository! This is where you can find and download various c
 
     ??? abstract "paperless"
         **Description**: Document management system
-        
-        [📥 Download Files](../../resources/docker/paperless){ .md-button }
         
         ??? example "View docker-compose.yaml"
             ```yaml
@@ -148,8 +123,6 @@ Welcome to my file repository! This is where you can find and download various c
     ??? abstract "restic"
         **Description**: Backup solution
         
-        [📥 Download Files](../../resources/docker/restic){ .md-button }
-        
         ??? example "View docker-compose.yaml"
             ```yaml
             --8<-- "docs/resources/docker/restic/docker-compose.yaml"
@@ -158,8 +131,6 @@ Welcome to my file repository! This is where you can find and download various c
     ??? abstract "searxng"
         **Description**: Privacy-focused meta search engine
         
-        [📥 Download Files](../../resources/docker/searxng){ .md-button }
-        
         ??? example "View docker-compose.yaml"
             ```yaml
             --8<-- "docs/resources/docker/searxng/docker-compose.yaml"
@@ -167,8 +138,6 @@ Welcome to my file repository! This is where you can find and download various c
 
     ??? abstract "vaultwarden"
         **Description**: Bitwarden-compatible password manager
-        
-        [📥 Download Files](../../resources/docker/vaultwarden){ .md-button }
         
         ??? example "View docker-compose.yaml"
             ```yaml
@@ -183,8 +152,6 @@ Welcome to my file repository! This is where you can find and download various c
     ??? abstract "zshrc"
         **Description**: ZSH shell configuration with custom aliases, paths, and functions
         
-        [📥 Download File](../../resources/dotfiles/zshrc){ .md-button }
-        
         ??? example "View zshrc"
             ```bash
             --8<-- "docs/resources/dotfiles/zshrc"
@@ -192,8 +159,6 @@ Welcome to my file repository! This is where you can find and download various c
     
     ??? abstract "gitconfig"
         **Description**: Git global configuration
-        
-        [📥 Download File](../../resources/dotfiles/gitconfig){ .md-button }
         
         ??? example "View gitconfig"
             ```ini
@@ -203,8 +168,6 @@ Welcome to my file repository! This is where you can find and download various c
     ??? abstract "bashrc"
         **Description**: Bash shell configuration (alternative to zshrc)
         
-        [📥 Download File](../../resources/dotfiles/bashrc){ .md-button }
-        
         ??? example "View bashrc"
             ```bash
             --8<-- "docs/resources/dotfiles/bashrc"
@@ -212,8 +175,6 @@ Welcome to my file repository! This is where you can find and download various c
 
     ??? abstract "bootstrap-scripts"
         **Description**: Scripts for setting up a new system
-        
-        [📥 Download Files](../../resources/dotfiles/bootstrap-scripts){ .md-button }
         
         ??? example "View bootstrap.sh"
             ```bash
@@ -236,8 +197,6 @@ Welcome to my file repository! This is where you can find and download various c
         ??? abstract "starship.toml"
             **Description**: Starship prompt configuration with Tokyo Night theme
             
-            [📥 Download File](../../resources/dotfiles/.config/starship.toml){ .md-button }
-            
             ??? example "View starship.toml"
                 ```toml
                 --8<-- "docs/resources/dotfiles/.config/starship.toml"
@@ -246,8 +205,6 @@ Welcome to my file repository! This is where you can find and download various c
         ??? abstract "tmux"
             **Description**: Terminal multiplexer configuration with vim-like keybindings
             
-            [📥 Download Files](../../resources/dotfiles/.config/tmux){ .md-button }
-            
             ??? example "View tmux.conf"
                 ```conf
                 --8<-- "docs/resources/dotfiles/.config/tmux/tmux.conf"
@@ -255,8 +212,6 @@ Welcome to my file repository! This is where you can find and download various c
         
         ??? abstract "aerospace"
             **Description**: macOS window manager configuration (similar to i3wm)
-            
-            [📥 Download Files](../../resources/dotfiles/.config/aerospace){ .md-button }
             
             ??? example "View aerospace.toml"
                 ```toml
