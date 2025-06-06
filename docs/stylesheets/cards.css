@@ -1,9 +1,9 @@
 /* Card Grid Layout */
 .md-content .card-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); 
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
   gap: 1.5rem;
-  margin-top: 1rem;
+  margin: 1rem 0.5rem;
 }
 
 .card {
@@ -120,9 +120,10 @@
 /* Main Content Layout */
 .md-main__inner {
   margin: 0 auto !important;
-  max-width: 70% !important;
+  max-width: min(70%, 1200px) !important;
   background: transparent !important;
   margin-top: 1rem;
+  padding: 0 1rem;
 }
 
 .md-content {
@@ -130,15 +131,15 @@
   margin: 0 !important;
   background-color: transparent !important;
   border-radius: 12px !important;
-  padding: 2rem !important;
+  padding: 1rem !important;
 }
 
 /* Custom Navigation */
 .custom-nav {
   display: flex;
   align-items: center;
-  gap: 1.5rem;
-  margin: 0 2rem;
+  gap: 1rem;
+  margin: 0 1rem;
 }
 
 .custom-nav .nav-link {
@@ -300,4 +301,44 @@ body::before {
 .md-typeset summary {
   background-color: rgba(0, 0, 0, 0.3) !important;
   color: var(--md-default-fg-color) !important;
+}
+
+/* Mobile Responsiveness */
+@media screen and (max-width: 76.1875em) {
+  .md-header__inner {
+    padding: 0.4rem;
+  }
+
+  .custom-nav {
+    display: none;
+  }
+
+  .md-main__inner {
+    max-width: 100% !important;
+    padding: 0 0.5rem;
+  }
+
+  .md-content {
+    padding: 0.5rem !important;
+  }
+
+  .card {
+    min-height: 150px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .md-content .card-grid {
+    grid-template-columns: 1fr;
+    margin: 1rem 0.25rem;
+  }
+
+  .md-header__title {
+    font-size: 0.9rem;
+  }
+
+  .md-header__button.md-logo svg {
+    width: 2rem;
+    height: 2rem;
+  }
 } 
