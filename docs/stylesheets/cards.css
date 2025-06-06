@@ -44,6 +44,7 @@
   align-items: center;
   max-width: 100%;
   padding: 0 0.6rem;
+  flex-wrap: wrap;
 }
 
 /* Logo Styling */
@@ -138,8 +139,9 @@
 .custom-nav {
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: 0.8rem;
   margin: 0 1rem;
+  flex-wrap: wrap;
 }
 
 .custom-nav .nav-link {
@@ -151,6 +153,7 @@
   border-radius: 4px;
   transition: all 0.2s ease;
   opacity: 0.9;
+  white-space: nowrap;
 }
 
 .custom-nav .nav-link:hover {
@@ -176,42 +179,33 @@
   }
 
   .custom-nav {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    background: var(--md-primary-fg-color);
-    flex-direction: column;
-    padding: 0.5rem;
-    gap: 0;
+    width: 100%;
+    justify-content: center;
+    padding: 0.3rem 0;
+    gap: 0.4rem;
     margin: 0;
-    transform: translateY(-100%);
-    transition: transform 0.3s ease;
-    z-index: 2;
-  }
-
-  .custom-nav.show {
-    transform: translateY(0);
+    background: rgba(0, 0, 0, 0.2);
   }
 
   .custom-nav .nav-link {
-    width: 100%;
-    text-align: center;
-    padding: 0.8rem;
-    border-radius: 0;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  }
-
-  .custom-nav .nav-link:last-child {
-    border-bottom: none;
-  }
-
-  .mobile-nav-toggle {
-    display: block;
+    font-size: 0.8rem;
+    padding: 0.3rem 0.6rem;
   }
 
   .md-header__title {
-    flex: 1;
+    font-size: 0.9rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .md-content .card-grid {
+    grid-template-columns: 1fr;
+    margin: 1rem 0.25rem;
+  }
+
+  .md-header__button.md-logo svg {
+    width: 2rem;
+    height: 2rem;
   }
 }
 
