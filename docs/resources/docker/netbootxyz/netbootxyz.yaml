@@ -1,0 +1,14 @@
+services:
+  netbootxyz:
+    image: ghcr.io/netbootxyz/netbootxyz
+    container_name: netbootxyz
+    environment:
+      - TZ=Europe/Amsterdam
+    volumes:
+      - /docker/netbootxyz/config:/config # optional
+      - /data/isos:/assets # optional
+
+    ports:
+      - 69:69/udp
+      - 3000:3000
+    restart: unless-stopped

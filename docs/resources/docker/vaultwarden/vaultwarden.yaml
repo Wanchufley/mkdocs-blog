@@ -1,0 +1,19 @@
+services:
+  vaultwarden:
+    container_name: vaultwarden
+    environment:
+      - TZ=Europe/Amsterdam
+    image: vaultwarden/server:latest
+    volumes:
+      - "/docker/vaultwarden/:/data/"
+    restart: unless-stopped
+    ports:
+      - 8085:80
+    networks:
+      proxy:
+    security_opt:
+      - no-new-privileges:true
+
+networks:
+  proxy:
+    external: true

@@ -1,0 +1,18 @@
+services:
+  code-server:
+    image: lscr.io/linuxserver/code-server:latest
+    container_name: code-server
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Europe/Amsterdam
+      - PASSWORD=${CODE_PASSWORD} #optional
+      - SUDO_PASSWORD=${CODE_PASSWORD} #optional
+    volumes:
+      - /docker/code-server/config:/config
+    restart: unless-stopped
+    
+networks:
+  default:
+    external: true
+    name: proxy
