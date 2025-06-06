@@ -173,6 +173,7 @@
   margin-right: 0.5rem;
 }
 
+/* Mobile Styles */
 @media screen and (max-width: 76.1875em) {
   .md-header__inner {
     padding: 0.4rem;
@@ -195,6 +196,15 @@
   .md-header__title {
     font-size: 0.9rem;
   }
+
+  .md-main__inner {
+    max-width: 90% !important;
+    padding: 0;
+  }
+
+  .md-content {
+    padding: 1rem !important;
+  }
 }
 
 @media screen and (max-width: 600px) {
@@ -206,6 +216,10 @@
   .md-header__button.md-logo svg {
     width: 2rem;
     height: 2rem;
+  }
+
+  .md-main__inner {
+    max-width: 95% !important;
   }
 }
 
