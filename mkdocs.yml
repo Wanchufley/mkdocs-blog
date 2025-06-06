@@ -32,7 +32,6 @@ nav:
 
 plugins:
   - search
-  - include-markdown
 #  - blog:
 #      blog_dir: .
 #      categories_allowed:
