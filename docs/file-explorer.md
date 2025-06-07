@@ -16,16 +16,13 @@ Welcome to my file repository! This is where you can find various configuration 
 
 ### 📂 ansible
 ??? info "Ansible Playbooks and Roles"
-    **Description**: Collection of Ansible playbooks and roles I use to automate my system configurations and deployments.
     
     *Playbooks and roles will be added as they are mentioned in blog posts...*
 
 ### 📂 docker
 ??? info "Docker Configurations"
-    **Description**: Docker compose files and configurations for various services I run in my homelab.
 
     ??? abstract "arr-stack"
-        **Description**: Media management stack (*arr applications)
         
         ??? example "View docker-compose.yaml"
             ```yaml
@@ -33,7 +30,6 @@ Welcome to my file repository! This is where you can find various configuration 
             ```
     
     ??? abstract "beszel"
-        **Description**: Personal chat application
         
         ??? example "View docker-compose.yaml"
             ```yaml
@@ -41,7 +37,6 @@ Welcome to my file repository! This is where you can find various configuration 
             ```
 
     ??? abstract "code-server"
-        **Description**: VS Code in the browser
         
         ??? example "View docker-compose.yaml"
             ```yaml
@@ -49,7 +44,6 @@ Welcome to my file repository! This is where you can find various configuration 
             ```
 
     ??? abstract "crafty"
-        **Description**: Minecraft server manager
         
         ??? example "View docker-compose.yaml"
             ```yaml
@@ -57,7 +51,6 @@ Welcome to my file repository! This is where you can find various configuration 
             ```
 
     ??? abstract "gotify"
-        **Description**: Self-hosted notification service
         
         ??? example "View docker-compose.yaml"
             ```yaml
@@ -65,7 +58,6 @@ Welcome to my file repository! This is where you can find various configuration 
             ```
 
     ??? abstract "homepage"
-        **Description**: Dynamic homepage for services
         
         ??? example "View docker-compose.yml"
             ```yaml
@@ -73,7 +65,6 @@ Welcome to my file repository! This is where you can find various configuration 
             ```
 
     ??? abstract "it-tools"
-        **Description**: Collection of IT tools and utilities
         
         ??? example "View docker-compose.yaml"
             ```yaml
@@ -81,7 +72,6 @@ Welcome to my file repository! This is where you can find various configuration 
             ```
 
     ??? abstract "libreoffice"
-        **Description**: LibreOffice in a container
         
         ??? example "View docker-compose.yaml"
             ```yaml
@@ -89,7 +79,6 @@ Welcome to my file repository! This is where you can find various configuration 
             ```
 
     ??? abstract "netbootxyz"
-        **Description**: Network boot utility
         
         ??? example "View docker-compose.yaml"
             ```yaml
@@ -97,7 +86,6 @@ Welcome to my file repository! This is where you can find various configuration 
             ```
 
     ??? abstract "npm"
-        **Description**: Nginx Proxy Manager
         
         ??? example "View docker-compose.yaml"
             ```yaml
@@ -105,7 +93,6 @@ Welcome to my file repository! This is where you can find various configuration 
             ```
 
     ??? abstract "ollama"
-        **Description**: Local LLM runner
         
         ??? example "View docker-compose.yaml"
             ```yaml
@@ -113,7 +100,6 @@ Welcome to my file repository! This is where you can find various configuration 
             ```
 
     ??? abstract "paperless"
-        **Description**: Document management system
         
         ??? example "View docker-compose.yaml"
             ```yaml
@@ -121,7 +107,6 @@ Welcome to my file repository! This is where you can find various configuration 
             ```
 
     ??? abstract "restic"
-        **Description**: Backup solution
         
         ??? example "View docker-compose.yaml"
             ```yaml
@@ -129,7 +114,6 @@ Welcome to my file repository! This is where you can find various configuration 
             ```
 
     ??? abstract "searxng"
-        **Description**: Privacy-focused meta search engine
         
         ??? example "View docker-compose.yaml"
             ```yaml
@@ -137,7 +121,6 @@ Welcome to my file repository! This is where you can find various configuration 
             ```
 
     ??? abstract "vaultwarden"
-        **Description**: Bitwarden-compatible password manager
         
         ??? example "View docker-compose.yaml"
             ```yaml
@@ -146,11 +129,8 @@ Welcome to my file repository! This is where you can find various configuration 
 
 ### 📂 dotfiles
 ??? info "Personal Dotfiles"
-    **Description**: My personal configuration files for various tools and applications.
-    These are the configuration files I use to customize my development environment.
     
     ??? abstract "zshrc"
-        **Description**: ZSH shell configuration with custom aliases, paths, and functions
         
         ??? example "View zshrc"
             ```bash
@@ -158,7 +138,6 @@ Welcome to my file repository! This is where you can find various configuration 
             ```
     
     ??? abstract "gitconfig"
-        **Description**: Git global configuration
         
         ??? example "View gitconfig"
             ```ini
@@ -166,7 +145,6 @@ Welcome to my file repository! This is where you can find various configuration 
             ```
 
     ??? abstract "bashrc"
-        **Description**: Bash shell configuration (alternative to zshrc)
         
         ??? example "View bashrc"
             ```bash
@@ -174,7 +152,6 @@ Welcome to my file repository! This is where you can find various configuration 
             ```
 
     ??? abstract "bootstrap-scripts"
-        **Description**: Scripts for setting up a new system
         
         ??? example "View bootstrap.sh"
             ```bash
@@ -192,10 +169,8 @@ Welcome to my file repository! This is where you can find various configuration 
             ```
 
     ??? abstract ".config"
-        **Description**: Application-specific configurations
         
         ??? abstract "starship.toml"
-            **Description**: Starship prompt configuration with Tokyo Night theme
             
             ??? example "View starship.toml"
                 ```toml
@@ -203,7 +178,6 @@ Welcome to my file repository! This is where you can find various configuration 
                 ```
         
         ??? abstract "tmux"
-            **Description**: Terminal multiplexer configuration with vim-like keybindings
             
             ??? example "View tmux.conf"
                 ```conf
@@ -211,7 +185,6 @@ Welcome to my file repository! This is where you can find various configuration 
                 ```
         
         ??? abstract "aerospace"
-            **Description**: macOS window manager configuration (similar to i3wm)
             
             ??? example "View aerospace.toml"
                 ```toml
