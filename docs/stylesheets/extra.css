@@ -1,0 +1,153 @@
+.md-typeset .abstract,
+.md-typeset details.abstract {
+  border-color: white;
+}
+
+.md-typeset .abstract > .admonition-title,
+.md-typeset details.abstract > summary {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Target specifically the file explorer containers */
+.md-typeset .file-browser .admonition,
+.md-typeset .file-browser details {
+  border-color: white !important;
+  margin: 0.8em 0 !important;
+  position: relative !important;
+}
+
+.md-typeset .file-browser .admonition > .admonition-title,
+.md-typeset .file-browser details > summary {
+  background-color: rgba(255, 255, 255, 0.1) !important;
+  padding: 0.8rem !important;
+  min-height: 3rem !important;
+  display: flex !important;
+  align-items: center !important;
+}
+
+/* Specific styling for file and folder containers */
+.md-typeset details:has(summary:contains("📂")),
+.md-typeset details:has(summary:contains("📄")) {
+  border-color: white !important;
+  margin: 0.5em 0 !important;
+}
+
+.md-typeset details:has(summary:contains("📂")) > summary,
+.md-typeset details:has(summary:contains("📄")) > summary {
+  background-color: rgba(255, 255, 255, 0.1) !important;
+  padding: 0.8rem 2.5rem !important;
+  position: relative !important;
+}
+
+/* Keep other admonitions with their original styling */
+.md-typeset .admonition:not(.file-browser *),
+.md-typeset details:not(.file-browser *):not(:has(summary:contains("📂"))):not(:has(summary:contains("📄"))) {
+  border-color: inherit;
+}
+
+.md-typeset .admonition:not(.file-browser *) > .admonition-title,
+.md-typeset details:not(.file-browser *):not(:has(summary:contains("📂"))):not(:has(summary:contains("📄"))) > summary {
+  background-color: inherit;
+}
+
+/* Style modifications for file explorer admonitions */
+.md-typeset details.info,
+.md-typeset details.abstract,
+.md-typeset details.example {
+  border-color: rgba(255, 255, 255, 0.87) !important;
+  border-width: 1px !important;
+  border-style: solid !important;
+  border-radius: 4px !important;
+}
+
+.md-typeset details.info > summary,
+.md-typeset details.abstract > summary,
+.md-typeset details.example > summary {
+  background-color: rgba(255, 255, 255, 0.05) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.87) !important;
+}
+
+/* Target all file and folder containers */
+.md-typeset details {
+  border: 1px solid rgba(255, 255, 255, 0.87) !important;
+  border-radius: 4px !important;
+  margin: 0.8em 0 !important;
+  background-color: var(--md-admonition-bg-color) !important;
+}
+
+/* Summary/Title bar styling */
+.md-typeset details > summary {
+  position: relative !important;
+  padding: 0.8rem !important;
+  min-height: 3rem !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 0.5rem !important;
+  cursor: pointer !important;
+  background-color: rgba(255, 255, 255, 0.05) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.87) !important;
+}
+
+/* Remove default arrow */
+.md-typeset summary::after {
+  display: none !important;
+}
+
+/* Icon base styles */
+.md-typeset details > summary::before {
+  position: static !important;
+  flex-shrink: 0 !important;
+  width: 1.5rem !important;
+  height: 1.5rem !important;
+  margin: 0 !important;
+  background-color: currentColor !important;
+  mask: var(--md-folder-icon) no-repeat center / contain !important;
+  -webkit-mask: var(--md-folder-icon) no-repeat center / contain !important;
+}
+
+/* Open folder state */
+.md-typeset details[open] > summary::before {
+  mask-image: var(--md-folder-open-icon) !important;
+  -webkit-mask-image: var(--md-folder-open-icon) !important;
+}
+
+/* File icon for leaf nodes */
+.md-typeset details:not(:has(details)) > summary::before {
+  mask-image: var(--md-document-icon) !important;
+  -webkit-mask-image: var(--md-document-icon) !important;
+}
+
+/* Content styling */
+.md-typeset details > div {
+  padding: 1rem !important;
+  margin: 0 !important;
+}
+
+/* Nested containers */
+.md-typeset details details {
+  margin-left: 1.5rem !important;
+  width: calc(100% - 1.5rem) !important;
+}
+
+/* Content spacing */
+.md-typeset details p {
+  margin: 0.5em 0 !important;
+}
+
+/* Description text */
+.md-typeset details > div > p:first-of-type {
+  margin-top: 0 !important;
+  color: rgba(255, 255, 255, 0.7) !important;
+}
+
+/* Code blocks */
+.md-typeset details pre {
+  margin: 1em 0 !important;
+}
+
+/* Optimized SVG icons */
+:root {
+  --md-folder-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M10 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2h-8l-2-2z'/%3E%3C/svg%3E");
+  --md-folder-open-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M19 20H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2h6l2 2h7c1.1 0 2 .9 2 2H4v10l2.1-8h17.1l-2.3 8.5c-.2.9-1 1.5-1.9 1.5z'/%3E%3C/svg%3E");
+  --md-document-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M13 9h5.5L13 3.5V9M6 2h8l6 6v12c0 1.1-.9 2-2 2H6c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2z'/%3E%3C/svg%3E");
+} 

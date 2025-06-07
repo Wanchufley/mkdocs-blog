@@ -15,13 +15,10 @@ theme:
         icon: material/brightness-4
         name: Switch to system preference
   features:
-    - header.autohide
     - navigation.instant
     - navigation.tracking
     - navigation.sections
     - toc.follow
-    - search.suggest
-    - search.highlight
   icon:
     logo: material/alpha-w
 
@@ -33,6 +30,7 @@ extra:
 
 extra_css:
   - stylesheets/cards.css
+  - stylesheets/extra.css
 
 nav:
   - 🏠 Home: index.md
@@ -54,15 +52,11 @@ nav:
 plugins:
   - search:
       separator: '[\s\-,:!=\[\]()"/]+|(?!\b)(?=[A-Z][a-z])|\.(?!\d)|&[lg]t;'
-#  - blog:
-#      blog_dir: .
-#      categories_allowed:
-#      - Tech
-#      post_url_format: "{slug}"
-#      blog_toc: true
-#      archive: false
-#      index_page: false
-  - tags
+  - tags:
+      enabled: true
+      tags_file: tags.md
+      tags_extra_files:
+        tags.md: "Tags"
 
 markdown_extensions:
   - attr_list
