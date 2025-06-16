@@ -17,7 +17,7 @@ Feel free to scroll through, explore, and get inspired!
 ---
 <div>
     <h1>Coffe Shop Cashier:</h1>
-    <iframe src="/mkdocs-blog/resources/iframes/coffee-shop.html" width="100%" height="800px"></iframe>
+    <iframe src="https://www.xrxapp.org/resources/iframes/coffee-shop.html" width="100%" height="800px"></iframe>
 </div>
 ---
 
