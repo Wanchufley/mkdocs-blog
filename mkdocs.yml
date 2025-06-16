@@ -1,5 +1,5 @@
 site_name: Wanchufley's Documentation 
-site_url: https://wanchufley.github.io/mkdocs-blog
+site_url: https://xrxapp.org
 site_description: Personal documentation and configuration files
 site_author: Wanchufley
 
@@ -21,6 +21,7 @@ theme:
     - toc.follow
   icon:
     logo: material/alpha-w
+  favicon: assets/img/favicon.ico
 
 extra:
   generator: false
