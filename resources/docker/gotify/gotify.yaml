@@ -1,0 +1,13 @@
+services:
+  gotify:
+    image: gotify/server
+    container_name: gotify
+    volumes:
+      - /docker/gotify:/app/data
+    restart: unless-stopped
+    ports:
+      - 8086:80
+    security_opt:
+      - no-new-privileges:true
+    environment:
+      - TZ=Europe/Amsterdam

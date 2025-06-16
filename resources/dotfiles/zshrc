@@ -1,0 +1,37 @@
+
+# ---------------------------------------------------------------------------------
+#| __  __ ___ __  __       ____ ___  _  _         ___   ___   _  _  ___  ___   ___ |
+#| \ \/ /| _ \\ \/ /      |_  // __|| || |       / __| / _ \ | \| || __||_ _| / __||
+#|  >  < |   / >  <        / / \__ \| __ |      | (__ | (_) || .  || _|  | | | (_ ||
+#| /_/\_\|_|_\/_/\_\      /___||___/|_||_|       \___| \___/ |_|\_||_|  |___| \___||
+#|_________________________________________________________________________________|
+
+# Paths
+export PATH="/usr/local/sbin:$PATH"
+export PATH="/usr/local/bin:$PATH"
+export PATH=$PATH:/usr/local/nvim/bin
+export PATH="$HOME/.local/bin:$PATH"
+export NVM_DIR="$HOME/.nvm"
+# Inits
+eval "$(starship init zsh)" # starship
+eval "$(zoxide init zsh)" # zoxide
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+# Aliases
+alias superls='fzf --preview="bat --color=always {}"'
+alias cd="z"
+alias ls="eza --icons=always"
+alias reload-zsh="source ~/.zshrc"
+# Auto attach to a specific tmux session (e.g., "dev") if not already in tmux
+if [ -z "$TMUX" ]; then
+  tmux attach-session -t xrx-default || tmux new-session -s xrx-default
+fi
+# FZF fuzzy history search bound to Ctrl+H
+fzf-history-widget() {
+  local selected
+  selected=$(print -rl -- ${(o)history[@]} | fzf --tac --no-sort) || return
+  LBUFFER+=$selected
+  zle reset-prompt
+}
+zle -N fzf-history-widget
+bindkey '^H' fzf-history-widget

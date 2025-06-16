@@ -1,0 +1,155 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+input {
+  border-radius: 50px;
+  padding: 20px;
+  border-color: chocolate;
+  background-color: transparent;
+  color: brown; 
+}
+.btn  {
+  margin: 50px;
+  justify-content: center;
+}
+.place-order {
+  padding: 20px;
+  border-radius: 50px;
+  width: 100%;
+  margin-top: auto;
+  background-color: chocolate;
+  border: none;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+}
+.payment  {
+  border-radius: 5px;
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  background-color: Bisque;
+  padding: 20px;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+}
+.name {
+  padding: 20px;
+  border-radius: 5px;
+  margin: 20px;
+  background-color: Bisque;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+}
+.name-items {
+  position: relative;
+  border-radius: 5px;
+  margin: 20px;
+  display: flex;
+  flex-direction: column-reverse;
+}
+.payment-items {
+  position: relative;
+  display: inline-block;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+.right-cells {
+  display: flex;
+  justify-content: right;
+  padding-left: 200px;
+}
+.price {
+  display: flex;
+  justify-content: center;
+  margin: 50px;
+}
+.cart {
+  display: flex;
+  margin: 20px;
+}
+@media (max-width: 768px) {
+  .cart {
+    flex-direction: column;
+  }
+}
+.page {
+  display: flex;
+  flex-direction: column;
+  size: 100%;
+}
+.items {
+  padding: 20px;
+  margin: 20 0px;
+  border-radius: 5px;
+  width: 100%;
+  background-color: Bisque;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+}
+.wallet {
+  padding: 20px;
+  margin: 10px;
+  width: 100%;
+}
+.input-label {
+  background-color: Bisque;
+  color: chocolate;
+  font-size: 11px;
+  position: absolute;
+  left: 50px;
+  top: 12px;
+  padding: 0 2px;
+  font-weight: bold;
+}
+.input-label-2 {
+  background-color: Bisque;
+  color: chocolate;
+  font-size: 11px;
+  position: absolute;
+  left: 30px;
+  top: -8px;
+  padding: 0 2px;
+  font-weight: bold;
+}
+.section-title {
+  color: chocolate;
+  font-size: 20px;
+}
+.header {
+  background-color: chocolate;
+  display: flex;
+  justify-content: center;
+  color: Bisque;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+  border-radius: 15px;
+}
+.item-cells {
+  color: chocolate;
+}
+.item {
+  display: flex;
+  color: chocolate;
+}
+.quantity {
+  width: 15%;
+  padding: 10px;
+  color: chocolate;
+}
+.product {
+  width: 70%;
+  padding: 10px;
+  color: chocolate;
+}
+.product-price {
+  width: 15%;
+  padding: 10px;
+  color: chocolate;
+  font-weight: bold;
+}
+hr {
+  color: chocolate;
+}
+.product p:first-child {
+  font-weight: bold;
+  color: black;
+}

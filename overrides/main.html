@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block header %}
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid">
+    <!-- Logo and title -->
+    <div class="md-header__logo">
+      <a href="https://wanchufley.github.io/mkdocs-blog" title="{{ config.site_name }}" class="md-header__button md-logo">
+        {% include "partials/logo.html" %}
+      </a>
+    </div>
+
+    <!-- Custom navigation -->
+    <div class="custom-nav">
+      <a href="{{ 'index.html' | url }}" class="nav-link">Home</a>
+      <a href="{{ 'about/' | url }}" class="nav-link">About</a>
+      <a href="{{ 'file-explorer/' | url }}" class="nav-link">Files</a>
+      <a href="{{ 'tags/' | url }}" class="nav-link">Tags</a>
+      <a href="{{ 'portfolio/' | url }}" class="nav-link">Portfolio</a>
+    </div>
+
+    <!-- Search box and theme toggle -->
+    <div class="md-header__options">
+      {% if "search" in config["plugins"] %}
+        {% include "partials/search.html" %}
+      {% endif %}
+      {% if config.theme.palette %}
+        {% include "partials/palette.html" %}
+      {% endif %}
+    </div>
+  </nav>
+</header>
+{% endblock %} 

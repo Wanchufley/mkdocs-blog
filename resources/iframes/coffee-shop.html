@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&displ" rel="stylesheet">
+    <link rel="stylesheet" href="./stylesheets/styles.css">
+		<title>Coffee Shop</title>
+	</head>
+	<body>
+    <div class="page">
+      <div class="header">
+        <h1>Coffee Masters</h1>
+      </div>
+      <div class="cart">
+        <div class="items">
+          <div class="item">
+            <p class="quantity">1x</p>
+            <div class="product">
+              <p>Capuccino</p>
+              <p>Soya Milk</p>
+            </div>
+            <p class="product-price">$3.85</p>
+          </div> 
+          <hr>
+          <div class="item">
+            <p class="quantity">1x</p>
+            <div class="product">
+              <p>Capuccino</p>
+              <p>Soya Milk</p>
+              <p>No Sugar</p>
+            </div>
+            <p class="product-price">$3.85</p>
+          </div> 
+          <hr>
+          <div class="item">
+            <p class="quantity">1x</p>
+            <div class="product">
+              <p>Croissant</p>
+              <p>Butter</p>
+            </div>
+            <p class="product-price">$2.45</p>
+          </div> 
+        </div>
+        <div class="wallet">
+          <div class="name">
+            <h1 class="section-title">NAME</h1>
+            <div class="name-items">
+              <label for="name-label" class="input-label-2">Full Name</label>
+              <input id="name-label"class="full-name" placeholder="Full Name" /> 
+            </div>
+          </div>
+          <div class="payment">
+            <h1 class="section-title">PAYMENT DETAILS</h1>
+            <div class="payment-items">
+              <label for="card-label" class="input-label">Card Number</label>
+              <input id="card-label" placeholder="Card Number" /> 
+            </div>
+            <div class="payment-items">
+              <label for="security-label" class="input-label">Security Code</label>
+              <input id="security-label" placeholder="Security Code" /> 
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="price">
+        <table class="price-table">
+          <tr>
+            <td class="left-cells"> <!--0,0-->
+              Subtotal:
+            </td>
+            <td class="right-cells"> <!--0,1-->
+              $9,65
+            </td>
+          </tr>
+          <tr>
+            <td class="left-cells"> <!--1,0-->
+              Tax:
+            </td>
+            <td class="right-cells"> <!--1,1-->
+              $0,82
+            </td>
+          </tr>
+          <tr>
+            <td class="left-cells"> <!--2,0-->
+              Total:
+            </td>
+            <td class="right-cells"> <!--2,1-->
+              $10,47
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="btn">
+        <button class="place-order">Place your order!</button>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,41 @@
+services:
+  ollama:
+    # Uncomment below for GPU support
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities:
+                - gpu
+    volumes:
+      - /home/serveradmin/docker/ollama:/root/.ollama
+    # Uncomment below to expose Ollama API outside the container stack
+    ports:
+      - 11434:11434
+    container_name: ollama
+    environment:
+      - TZ=Europe/Amsterdam
+    pull_policy: always
+    tty: true
+    restart: unless-stopped
+    image: ollama/ollama:latest
+
+  openwebui:
+    image: ghcr.io/open-webui/open-webui:main
+    container_name: openwebui
+    ports:
+      - "3000:8080"
+    environment:
+      - OLLAMA_BASE_URL=http://192.168.178.194:11434
+      - TZ=Europe/Amsterdam
+    depends_on:
+      - ollama
+    restart: unless-stopped
+    networks:
+      - ollama-net
+
+networks:
+  ollama-net:
+    driver: bridge

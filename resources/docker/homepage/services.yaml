@@ -1,0 +1,280 @@
+---
+# For configuration options and examples, please see:
+# https://gethomepage.dev/configs/services/
+
+- Infrastructure:
+    - pve-homelab:
+        icon: proxmox.png
+        siteMonitor: https://192.168.178.160:8006
+        href: https://pve-homelab.xrx-tech.org
+        widget:
+            type: proxmox
+            url: https://192.168.178.160:8006
+            username: {{HOMEPAGE_VAR_PROXMOX_USERNAME}}
+            password: {{HOMEPAGE_VAR_PROXMOX_PASSWORD}}
+            node: pve-homelab
+    - pve-kuro:
+        icon: proxmox.png
+        siteMonitor: https://192.168.178.11:8006
+        href: https://pve-kuro.xrx-tech.org
+        widget:
+            type: proxmox
+            url: https://192.168.178.11:8006
+            username: {{HOMEPAGE_VAR_PROXMOX_USERNAME}}
+            password: {{HOMEPAGE_VAR_PROXMOX_PASSWORD}}
+            node: pve-kuro
+    - pve-test:
+        icon: proxmox.png
+        siteMonitor: https://192.168.178.141:8006
+        href: https://192.168.178.141:8006
+        widget:
+            type: proxmox
+            url: https://192.168.178.141:8006
+            username: {{HOMEPAGE_VAR_PROXMOX_USERNAME}}
+            password: {{HOMEPAGE_VAR_PROXMOX_PASSWORD}}
+            node: pve-test
+    - proxmox-backup-server: 
+        icon: proxmox-light.png
+        siteMonitor: https://192.168.178.14:8007
+        href: https://pbs.xrx-tech.org
+        widget:
+            type: proxmoxbackupserver
+            url: https://192.168.178.14:8007 
+            username: {{HOMEPAGE_VAR_PBS_USERNAME}}
+            password: {{HOMEPAGE_VAR_PBS_PASSWORD}}
+    - portainer:
+        icon: portainer.png
+        siteMonitor: https://192.168.178.136:9443
+        href: https://portainer.xrx-tech.org
+        widget:
+            type: portainer
+            url: https://192.168.178.136:9443
+            env: 2
+            key: {{HOMEPAGE_VAR_PORTAINER_TOKEN}}
+    - portainer-gpu:
+        icon: portainer.png
+        siteMonitor: https://192.168.178.182:9443
+        href: https://192.168.178.182:9443
+        widget:
+            type: portainer
+            url: https://192.168.178.182:9443
+            env: 2
+            key: {{HOMEPAGE_VAR_PORTAINER2_TOKEN}}
+    - truenas: 
+        icon: truenas.png
+        siteMonitor: http://192.168.178.190
+        href: https://truenas.xrx-tech.org
+        widget:
+            type: truenas
+            url: http://192.168.178.190
+            key: {{HOMEPAGE_VAR_TRUENAS2_TOKEN}}
+            enablePools: true # optional, defaults to false
+            nasType: scale # defaults to scale, must be set to 'core' if using enablePools with TrueNAS Core
+    - truenas-backup: 
+        icon: truenas.png
+        siteMonitor: http://192.168.178.29
+        href: https://truenas-backup.xrx-tech.org
+        widget:
+            type: truenas
+            url: http://192.168.178.29
+            key: {{HOMEPAGE_VAR_TRUENAS_TOKEN}}
+            enablePools: true # optional, defaults to false
+            nasType: scale # defaults to scale, must be set to 'core' if using enablePools with TrueNAS Core
+
+- Automation and Monitoring:
+    - gotify:
+        icon: gotify.png
+        siteMonitor: http://192.168.178.136:8086
+        href: https://gotify.xrx-tech.org
+        server: servarr
+        container: gotify
+#        widget:
+#            type: gotify
+#            url: http://192.168.178.136:8086
+#            key: {{HOMEPAGE_VAR_GOTIFY_TOKEN}}
+        widget:
+            type: iframe
+            name: gotify-Iframe
+            src: https://gotify.xrx-tech.org
+            classes: h-96 sm:h-96 md:h-[40rem] lg:h-[50rem] xl:h-[60rem] 2xl:h-[70rem]
+    - uptime-kuma:
+        icon: uptime-kuma.png
+        siteMonitor: http://192.168.178.136:3001
+        href: https://kuma.xrx-tech.org
+        server: servarr
+        container: uptime-kuma
+        widget:
+            type: uptimekuma
+            url: http://192.168.178.136:3001
+            slug: homelab
+    - beszel:
+        icon: beszel.png
+        siteMonitor: http://192.168.178.136:8090
+        href: https://beszel.xrx-tech.org
+        server: servarr
+        container: beszel
+#        widget:
+#            type: beszel
+#            url: http://192.168.178.136:8090
+#            username: {{HOMEPAGE_VAR_BESZEL_USERNAME}} # email
+#            password: {{HOMEPAGE_VAR_BESZEL_PASSWORD}}
+    - homeassistant:
+        icon: home-assistant.png
+        siteMonitor: http://192.168.178.88:8123
+        href: https://homeassistant.xrx-tech.org
+        widget:
+            type: homeassistant
+            url: http://192.168.178.88:8123
+            key: {{HOMEPAGE_VAR_HASS_TOKEN}}
+            
+- Utilities:
+    - calendar:
+        widget:
+          type: calendar
+          view: agenda
+          maxEvents: 10 # optional - defaults to 10
+          showTime: true # optional - show time for event happening today - defaults to false
+          previousDays: 3 # optional - shows events since three days ago - defaults to 0
+          integrations: # optional
+              - type: sonarr # active widget type that is currently enabled on homepage - possible values: radarr, sonarr, lidarr, readarr, ical
+                service_group: Arr-Stack # group name where widget exists
+                service_name: sonarr # service name for that widget
+                color: teal
+                params: # optional - additional params for the service
+                  unmonitored: true # optional - defaults to false, used with *arr stack
+              - type: radarr # active widget type that is currently enabled on homepage - possible values: radarr, sonarr, lidarr, readarr, ical
+                service_group: Arr-Stack # group name where widget exists
+                service_name: radarr # service name for that widget
+                color: yellow
+                params: # optional - additional params for the service
+                  unmonitored: true # optional - defaults to false, used with *arr stack
+    - pihole:
+        icon: pi-hole.png
+        siteMonitor: http://192.168.178.65:80/admin
+        href: https://pihole.xrx-tech.org/admin
+        widget:
+            type: pihole
+            url: http://192.168.178.65:80
+            version: 6
+            key: {{HOMEPAGE_VAR_PIHOLE_PASSWORD}}
+    - nginx-proxy-manager:
+        icon: nginx-proxy-manager.png
+        siteMonitor: http://192.168.178.136:81
+        href: https://npm.xrx-tech.org
+        server: servarr
+        container: npm
+        widget:
+            type: npm
+            url: http://192.168.178.136:81
+            username: {{HOMEPAGE_VAR_NPM_USERNAME}}
+            password: {{HOMEPAGE_VAR_NPM_PASSWORD}}
+    - gitea:
+        icon: gitea.png
+        siteMonitor: http://192.168.178.136:3002
+        href: https://gitea.xrx-tech.org/wanchufley
+        server: servarr
+        container: gitea
+        widget:
+            type: gitea
+            url: http://192.168.178.136:3002
+            key: {{HOMEPAGE_VAR_GITEA_TOKEN}}
+    - adguard-home:
+        icon: adguard-home.png
+        siteMonitor: http://192.168.178.172
+        href: https://adguard.xrx-tech.org
+    - nextcloud:
+        icon: nextcloud.png
+        siteMonitor: http://192.168.178.173:4443
+        href: https://nextcloud.xrx-tech.org
+    - it-tools:
+        icon: it-tools.png
+        siteMonitor: http://192.168.178.136:8083
+        href: https://it-tools.xrx-tech.org
+        server: servarr
+        container: it-tools
+    - openwebui:
+        icon: open-webui.png
+        siteMonitor: http://192.168.178.182:3000
+        href: https://xrxgpt.xrx-tech.org
+    - code-server:
+        icon: code-server.png
+#        siteMonitor: http://192.168.178.136:8443
+        href: https://code-server.xrx-tech.org
+        server: servarr
+        container: code-server
+- Arr-Stack:
+    - sonarr:
+        icon: sonarr.png
+        siteMonitor: http://192.168.178.136:8989
+        href: https://sonarr.xrx-tech.org
+        server: servarr
+        container: sonarr
+        widget:
+            type: sonarr
+            url: http://192.168.178.136:8989
+            key: {{HOMEPAGE_VAR_SONARR_TOKEN}}
+    - radarr:
+        icon: radarr.png
+        siteMonitor: http://192.168.178.136:7878
+        href: https://radarr.xrx-tech.org
+        server: servarr
+        container: radarr
+        widget:
+            type: radarr
+            url: http://192.168.178.136:7878
+            key: {{HOMEPAGE_VAR_RADARR_TOKEN}}
+    - bazarr:
+        icon: bazarr.png
+        siteMonitor: http://192.168.178.136:6767
+        href: https://bazarr.xrx-tech.org
+        server: servarr
+        container: bazarr
+        widget:
+            type: bazarr
+            url: http://192.168.178.136:6767
+            key: {{HOMEPAGE_VAR_BAZARR_TOKEN}}
+    - prowlarr:
+        icon: prowlarr.png
+        siteMonitor: http://192.168.178.136:9696
+        href: https://prowlarr.xrx-tech.org
+        server: servarr
+        container: prowlarr
+        widget:
+            type: prowlarr
+            url: http://192.168.178.136:9696
+            key: {{HOMEPAGE_VAR_PROWLARR_TOKEN}}
+    - qbittorrent:
+        icon: qbittorrent.png
+        siteMonitor: http://192.168.178.136:8080
+        href: https://qbittorrent.xrx-tech.org
+        server: servarr
+        container: qbittorrent
+        widget:
+            type: qbittorrent
+            url: http://192.168.178.136:8080
+            username: {{HOMEPAGE_VAR_QBITTORRENT_USERNAME}}
+            password: {{HOMEPAGE_VAR_QBITTORRENT_PASSWORD}}
+            enableLeechProgress: true # optional, defaults to false
+    - jellyfin:
+        icon: jellyfin.png
+        siteMonitor: http://192.168.178.182:8096
+        href: https://xrxflix.xrx-tech.org
+        widget:
+            type: jellyfin
+            url: http://192.168.178.182:8096
+            key: {{HOMEPAGE_VAR_JELLYFIN_TOKEN}}
+            enableBlocks: true # optional, defaults to false
+            enableNowPlaying: true # optional, defaults to true
+            enableUser: true # optional, defaults to false
+            showEpisodeNumber: true # optional, defaults to false
+            expandOneStreamToTwoRows: false # optional, defaults to true
+    - jellyseer:
+        icon: jellyseerr.png
+        siteMonitor: http://192.168.178.136:5055
+        href: https://jellyseer.xrx-tech.org
+        server: servarr
+        container: jellyseerr
+        widget:
+            type: jellyseerr
+            url: http://192.168.178.136:5055
+            key: {{HOMEPAGE_VAR_JELLYSEER_TOKEN}}

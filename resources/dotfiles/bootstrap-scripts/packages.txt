@@ -1,0 +1,7 @@
+git
+tmux
+curl
+bat
+fzf
+btop
+ansible
